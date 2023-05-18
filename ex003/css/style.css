@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: Varsity;
+    src: url(../fonts/varsity_regular.ttf);
+}
+
 :root {
     --cor1:#B8453E;
     --cor2:#232526;
@@ -15,16 +20,21 @@
 }
 
 header {
-    height: 50px; /* Essa propriedade altera a altura */
     background-color: var(--cor2);
     display: flex;
     flex-direction: row; /* Define a direção se é em Linha ou Coluna */
-    padding: 0 15px 0 15px;
+    /* padding: 0 15px 0 15px; */
+}
+
+#header {
+    display: flex;
+    width: 1500px;
+    max-width: 1500px;
+    margin: auto;
 }
 
 #logo {
-    width: 150px;
-    height: 100%;
+    width: 300px;
     color: white; /* Define a cor da fonte dos textos */
     font-size: 30px; /* Define o tamanho da fonte */
     text-transform: uppercase; /* Coloca em letras maiusculas */
@@ -33,9 +43,12 @@ header {
 }
 
 #logo img {
-    width: 40px;
+    width: 60px;
 }
 
+#logo p {
+    margin-left: 10px;
+}
 nav {
     display: flex;
     margin-left: auto; 
@@ -45,7 +58,7 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    height: 100%;
+    height: 70px;
     width: 105px;
     display: flex;
     align-items: center; /* Centraliza na vertical */
@@ -55,4 +68,54 @@ a {
 
 a:hover {
     background-color: var(--cor1);
+}
+
+figure {
+    margin: auto;
+    width: 100%;
+    height: 400px;
+    background-image: url("../imagens/pexels-stefan-lorentz-668196.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#backgroundFilter {
+    background-color: rgba(0, 0, 0, 0.355);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-figure-small{
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#text-figure-1{
+    border-bottom: 2px solid white;
+    padding: 0 25px 10px 25px;    
+}
+#text-figure-2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 72px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+    /* font-family: Varsity; */
+}
+#text-figure-3{
+    border-top: 2px solid white;
+    padding: 10px 25px 0 25px;
+}
+
+@media (max-width: 775px) {
+    nav {
+        display: none;
+    }
 }
