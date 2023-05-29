@@ -1,14 +1,14 @@
 var valor1 = 2
 var valor2 = 5
 var valor3 = 10
-var valor4 = Number.parseInt('1')
+var valor4 = '1'
 
 /* Strings -> Textos - > Precisam estar entre aspas.*/
 
 console.log(typeof valor1)
 console.log(typeof valor4)
 
-var resultado = valor4 + valor1 + valor2
+var resultado = valor1 + valor2 + valor4 
 
 console.log(typeof valor4)
 
